@@ -28,7 +28,7 @@ set-AzContext -SubscriptionName '<subscription name here>' -Verbose
 # Get the output from the Invoke command and store it in the $output variable
 # Replace values for Resource Group and VM name
 # We run script.ps1 found in the top-level directory of this repo
-$output = Invoke-AzVMRunCommand -ResourceGroupName '<RG name here>' -VMName '<VM name here>' -CommandId 'RunPowerShellScript' -ScriptPath 'script.ps1' -Verbose
+$output = Invoke-AzVMRunCommand -ResourceGroupName '<RG name here>' -VMName '<VM name here>' -CommandId 'RunPowerShellScript' -ScriptPath 'getUsersFromVM.ps1' -Verbose
 
 Write-Output $output.Value.Message
 
